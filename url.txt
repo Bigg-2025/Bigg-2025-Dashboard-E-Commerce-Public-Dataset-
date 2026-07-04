@@ -1,2 +1,0 @@
-Tautan Dashboard Streamlit Cloud:
-[Isi dengan URL dashboard setelah proses deploy ke Streamlit Community Cloud selesai, contoh: https://nama-app-anda.streamlit.app]
