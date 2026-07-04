@@ -1,7 +1,12 @@
+from pathlib import Path
+
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
+
+BASE_DIR = Path(__file__).resolve().parent
+DATA_PATH = BASE_DIR / "main_data.csv"
 
 st.set_page_config(
     page_title="E-Commerce Analytics Dashboard",
@@ -100,7 +105,7 @@ st.markdown(
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("main_data.csv")
+    df = pd.read_csv(DATA_PATH)
     df["order_purchase_timestamp"] = pd.to_datetime(df["order_purchase_timestamp"])
     df["order_delivered_customer_date"] = pd.to_datetime(df["order_delivered_customer_date"])
     df["order_month"] = df["order_purchase_timestamp"].dt.to_period("M").astype(str)
