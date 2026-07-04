@@ -18,7 +18,7 @@ st.set_page_config(
 PRIMARY = "#6C5CE7"
 ACCENT = "#00CEC9"
 WARNING = "#FF6B6B"
-MUTED = "#161718"
+MUTED = "#A0A7B4"
 BG_CARD = "#FFFFFF"
 PLOTLY_TEMPLATE = "plotly_white"
 CATEGORICAL_PALETTE = ["#6C5CE7", "#00CEC9", "#FDCB6E", "#FF6B6B", "#74B9FF", "#55EFC4"]
@@ -94,8 +94,24 @@ st.markdown(
     section[data-testid="stSidebar"] {{
         background-color: #1E1B3A;
     }}
-    section[data-testid="stSidebar"] * {{
+    section[data-testid="stSidebar"] label,
+    section[data-testid="stSidebar"] .stMarkdown,
+    section[data-testid="stSidebar"] h1,
+    section[data-testid="stSidebar"] h2,
+    section[data-testid="stSidebar"] h3,
+    section[data-testid="stSidebar"] p,
+    section[data-testid="stSidebar"] .stCaption {{
         color: #F4F6FB !important;
+    }}
+    section[data-testid="stSidebar"] div[data-baseweb="select"] *,
+    section[data-testid="stSidebar"] div[data-baseweb="input"] *,
+    section[data-testid="stSidebar"] div[data-baseweb="datepicker"] *,
+    section[data-testid="stSidebar"] div[data-baseweb="popover"] * {{
+        color: #2D3436 !important;
+    }}
+    section[data-testid="stSidebar"] div[data-baseweb="select"] > div,
+    section[data-testid="stSidebar"] input {{
+        background-color: #FFFFFF !important;
     }}
     </style>
     """,
